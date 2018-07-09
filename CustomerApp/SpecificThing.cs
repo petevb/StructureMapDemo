@@ -1,14 +1,7 @@
-﻿namespace StructureMapDemo
+﻿using Models;
+
+namespace CustomerApp
 {
-    public interface IThing
-    {
-    }
-
-    public interface IGenericThing<T> : IThing
-    {
-        T Value { get; }
-    }
-
     public class StringThing : IGenericThing<string>
     {
         public string Value => "A string";

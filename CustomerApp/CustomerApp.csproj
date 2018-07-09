@@ -9,4 +9,8 @@
     <PackageReference Include="structuremap" Version="4.6.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\Models.csproj" />
+  </ItemGroup>
+
 </Project>

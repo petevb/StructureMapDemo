@@ -1,20 +1,18 @@
 ﻿using System;
 
-namespace StructureMapDemo
+namespace DriverApp
 {
     using System.Linq;
-
+    using Models;
     using StructureMap;
 
     class Program
     {
         static void Main(string[] args)
         {
-            var container = new Container(new DemoRegistry());
-
-            var stringThing = container.GetInstance<IGenericThing<string>>();
+            var container = new Container(new OtherRegistry());
             var intThing = container.GetInstance<IGenericThing<int>>();
-            Console.WriteLine($"String value: {stringThing.Value}");
+
             Console.WriteLine($"Int value: {intThing.Value}");
 
             var allThings = container.GetAllInstances<IThing>().ToList();
